@@ -4,7 +4,7 @@ using BookbrowseAPI.Models;
 
 namespace BookbrowseAPI.Services
 {
-    public class BookDbService
+    public class BookDbService : IBookDbService
     {
         private readonly BookDbContext _dbContext;
 
@@ -15,7 +15,7 @@ namespace BookbrowseAPI.Services
 
         public async Task<Book?> AddBookAsync(Book newBook)
         {
-            var book = await GetBookByIdAsync(newBook.Id);
+            var book = await GetBookAsync(newBook.Id);
             if (book != null)
                 return null;
 
@@ -26,7 +26,7 @@ namespace BookbrowseAPI.Services
 
         public async Task<bool> DeleteBookAsync(int id)
         {
-            var book = await GetBookByIdAsync(id);
+            var book = await GetBookAsync(id);
             if (book == null)
                 return false;
 
@@ -35,7 +35,7 @@ namespace BookbrowseAPI.Services
             return true;
         }
 
-        public async Task<Book?> GetBookByIdAsync(int id)
+        public async Task<Book?> GetBookAsync(int id)
         {
             var result = await _dbContext.Books.FindAsync(id);
             return result;
@@ -48,7 +48,7 @@ namespace BookbrowseAPI.Services
 
         public async Task<Book?> UpdateBookAsync(int id, Book updatedBook)
         {
-            var book = await GetBookByIdAsync(id);
+            var book = await GetBookAsync(id);
             if (book == null)
                 return null;
 

@@ -9,10 +9,10 @@ namespace BookbrowseAPI.Controllers
     [Route("api/[controller]")]
     public class BookbrowseController : ControllerBase
     {
-        private readonly BookDbService _bookDbService;
+        private readonly IBookDbService _bookDbService;
         private readonly ILogger<BookbrowseController> _logger;
 
-        public BookbrowseController(ILogger<BookbrowseController> logger, BookDbService bookDbService)
+        public BookbrowseController(ILogger<BookbrowseController> logger, IBookDbService bookDbService)
         {
             _bookDbService = bookDbService;
             _logger = logger;
@@ -28,7 +28,7 @@ namespace BookbrowseAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> Get(int id)
         {
-            var book = await _bookDbService.GetBookByIdAsync(id);
+            var book = await _bookDbService.GetBookAsync(id);
             return book == null ? NotFound() : Ok(book);
         }
 

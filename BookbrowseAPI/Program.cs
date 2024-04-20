@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlite("Data Source=book.db"));
-builder.Services.AddScoped<BookDbService>();
+builder.Services.AddScoped<IBookDbService, BookDbService>();
 
 var app = builder.Build();
 
