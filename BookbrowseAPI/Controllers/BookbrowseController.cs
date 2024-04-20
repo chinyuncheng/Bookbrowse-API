@@ -53,7 +53,7 @@ namespace BookbrowseAPI.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _bookDbService.DeleteBookAsync(id);
-            return !success ? NotFound() : Ok(success);
+            return success ? NoContent() : NotFound();
         }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookbrowseAPI", "BookbrowseAPI\BookbrowseAPI.csproj", "{24DA3941-A809-44FE-8985-D6B76A6BB062}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookbrowseAPITest", "BookbrowseAPITest\BookbrowseAPITest.csproj", "{641AA976-38B4-4370-B1C7-CF9E6FD766B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,16 @@ Global
 		{24DA3941-A809-44FE-8985-D6B76A6BB062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24DA3941-A809-44FE-8985-D6B76A6BB062}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DA3941-A809-44FE-8985-D6B76A6BB062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641AA976-38B4-4370-B1C7-CF9E6FD766B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641AA976-38B4-4370-B1C7-CF9E6FD766B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641AA976-38B4-4370-B1C7-CF9E6FD766B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641AA976-38B4-4370-B1C7-CF9E6FD766B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		        SolutionGuid = {1C1A4D0A-5626-45A9-B257-F51A2F4A94F1}
+		SolutionGuid = {2FEF9A26-8CB0-458F-805D-C9DE930D35B7}
 	EndGlobalSection
 EndGlobal
