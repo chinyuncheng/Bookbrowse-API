@@ -1,2 +1,2 @@
 # Bookbrowse-API
-ASP.NET Core Web API
+A simple RESTful API with ASP.NET Core.
