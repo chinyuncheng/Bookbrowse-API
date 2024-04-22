@@ -1,5 +1,5 @@
 # Bookbrowse-API
-A simple RESTful API with ASP.NET Core.
+A simple RESTful API with .NET 8.0
 
 ## Settings
 1. Restore NuGet Packages if necessary
